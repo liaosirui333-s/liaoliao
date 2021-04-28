@@ -1,0 +1,48 @@
+:root {
+  font-size: 15px;
+}
+
+body {
+  font-family: courier new;
+}
+
+small {
+  font-size: 0.8em;
+  font-weight: 700;
+  line-height: 1.5;
+  font-style: normal;
+}
+
+.hide {
+  display: none;
+
+}
+
+.chongchong:hover + .hide {
+display:contents;
+
+}
+
+
+details {
+  max-width: 3em;
+  margin: 0 auto;
+  padding-left: 0px;
+border-top-style: solid;
+margin-top: 2em;
+padding-top: 3em;
+border-top-color: black;
+
+}
+
+a:link {
+  text-decoration: none;
+  color: inherit;
+  background-color: #98ff69;
+}
+
+a:hover {
+  text-decoration-style: underline;
+  color:inherit;
+  background-color: hotpink;
+}
