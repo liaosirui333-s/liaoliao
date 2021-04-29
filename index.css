@@ -13,15 +13,20 @@ small {
   font-style: normal;
 }
 
-.hide {
-  display: none;
+.chongchong a {
+position:relative;
 
 }
 
-.chongchong:hover + .hide {
-display:contents;
+.chongchong a span {
+position:absolute; display:none; z-index:99;
 
 }
+
+.chongchong a:hover span { display:block; margin-left: 10em}
+
+
+
 
 
 details {
