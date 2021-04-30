@@ -1,0 +1,27 @@
+:root {
+  font-size: 15px;
+}
+
+body {
+  font-family: courier new;
+  font-size: 0.8em;
+  font-weight: 700;
+  line-height: 1.5;
+  font-style: normal;
+}
+
+.list {
+  margin-left: 2em;
+}
+
+a:link {
+  text-decoration: none;
+  color: inherit;
+  background-color: #98ff69;
+}
+
+a:hover {
+  text-decoration-style: underline;
+  color:inherit;
+  background-color: hotpink;
+}

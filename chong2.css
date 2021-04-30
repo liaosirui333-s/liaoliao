@@ -1,0 +1,63 @@
+:root {
+  font-size: 15px;
+}
+
+
+
+body {
+  margin-top: 17em;
+  font-family: courier new;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5;
+  font-style: normal;
+}
+
+.ppink {
+  background-color: pink;
+  border-radius: 3em;
+  height: 5em;
+  width: 5em;
+  margin: 0 auto;
+  animation-name: ppink;
+  animation-duration: 15s;
+  animation-timing-function: cubic-bezier(.68,-0.55,.27,1.55);
+  animation-iteration-count: infinite;
+}
+
+a:link {
+  text-decoration: none;
+  color: inherit;
+  background-color: #98ff69;
+}
+
+a:hover {
+  text-decoration-style: underline;
+  color:inherit;
+  background-color: hotpink;
+}
+
+
+
+
+
+@keyframes ppink {
+  0% {
+    transform: rotate(0deg) translate(.5em, -.5em) rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-360deg) translate(.5em, -1.5em) rotate(420deg);
+  }
+
+  50% {
+    transform: rotate(0deg) translate(.5em, -.5em) rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(420deg) translate(.5em, -.5em) rotate(-420deg);
+  }
+
+  100% {
+    transform: rotate(0deg) translate(.5em, -.5em) rotate(0deg);
+  }
