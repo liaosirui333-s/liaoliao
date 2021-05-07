@@ -5,6 +5,9 @@
 
 body {
   font-family: courier new;
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+justify-content:center;
 }
 
 /*口袋*/
@@ -12,11 +15,6 @@ header {
   margin: 1em;
   padding: 0;
 margin-top: 15em;
-  display: flex;
-align-items:center;
-
-
-  justify-content: space-between;
 
 }
 
@@ -26,13 +24,10 @@ p {
 
 /*黑幕*/
 .chong {
-  width: 32%;
-  padding-bottom: 32%;
-
-
+height:30em;
   background-color: #40f9bc;
   border-radius: 60% 80% 50% 60%;
-  transform: rotate(100deg);
+
 /*
   animation-name: c2;
   animation-duration: 15s;
@@ -42,18 +37,16 @@ p {
 }
 
 .jobs {
-  width: 32%;
-  padding-bottom: 32%;
+height:30em;
   background-color: #c0ff63;
   border-radius: 10% 400% 10%;
-  transform: rotate(-80deg);
+
 }
 
 .bobo {
-  width: 32%;
-  padding-bottom: 32%;
-  background-image: linear-gradient(rgb(188, 233, 255), rgb(255, 253, 153));
+  height:30em;
 
+  background-image: linear-gradient(rgb(188, 233, 255), rgb(255, 253, 153));
 }
 
 small {
@@ -139,3 +132,8 @@ a:hover {
   100% {
     transform: rotate(0deg) translate(.5em, -.5em) rotate(0deg);
   }*/
+  @media (max-width: 800px) {
+    body {
+      grid-template-columns: 1fr;
+    }
+  }
