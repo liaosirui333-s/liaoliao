@@ -5,30 +5,53 @@
 
 
 body {
-  margin-top: 17em;
+
+
   font-family: courier new;
   font-size: 1em;
   font-weight: 700;
   line-height: 1.5;
   font-style: normal;
+
+
 }
 
-.ppink {
-  background-color: pink;
-  border-radius: 3em;
+.chong{
+  background-color: light-blue;
+}
+
+
+
+
+
+.c2 {
+
   height: 5em;
   width: 5em;
-  margin: 0 auto;
-  animation-name: ppink;
+  animation-name: c2;
   animation-duration: 15s;
-  animation-timing-function: cubic-bezier(.68,-0.55,.27,1.55);
+  animation-timing-function: cubic-bezier(.68,-0.55,.47,1.5);
   animation-iteration-count: infinite;
 }
 
 
+.c3 {
+
+  animation-name: c2;
+  animation-duration: 15s;
+  animation-timing-function: cubic-bezier(1,-0.5,1.2,1);
+  animation-iteration-count: infinite;
+}
+
+.c4 {
 
 
 
+  animation-name: c2;
+  animation-duration: 15s;
+  animation-timing-function: cubic-bezier(0.5,-0.3,0.2,-0.4);
+  animation-iteration-count: infinite;
+}
 
 
 
@@ -65,23 +88,19 @@ a:hover {
 
 
 
-@keyframes ppink {
+@keyframes c2 {
   0% {
     transform: rotate(0deg) translate(.5em, -.5em) rotate(0deg);
   }
-
   25% {
     transform: rotate(-360deg) translate(.5em, -1.5em) rotate(420deg);
   }
-
   50% {
     transform: rotate(0deg) translate(.5em, -.5em) rotate(0deg);
   }
-
   75% {
     transform: rotate(420deg) translate(.5em, -.5em) rotate(-420deg);
   }
-
   100% {
     transform: rotate(0deg) translate(.5em, -.5em) rotate(0deg);
   }

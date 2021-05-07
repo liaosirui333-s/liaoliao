@@ -1,9 +1,59 @@
 :root {
   font-size: 15px;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   font-family: courier new;
+}
+
+/*口袋*/
+header {
+  margin: 1em;
+  padding: 0;
+margin-top: 15em;
+  display: flex;
+align-items:center;
+
+
+  justify-content: space-between;
+
+}
+
+p {
+  font-size: 0.7em;
+}
+
+/*黑幕*/
+.chong {
+  width: 32%;
+  padding-bottom: 32%;
+
+
+  background-color: #40f9bc;
+  border-radius: 60% 80% 50% 60%;
+  transform: rotate(100deg);
+/*
+  animation-name: c2;
+  animation-duration: 15s;
+  animation-timing-function: cubic-bezier(.68, -0.55, .47, 1.5);
+  animation-iteration-count: infinite;
+}*/
+}
+
+.jobs {
+  width: 32%;
+  padding-bottom: 32%;
+  background-color: #c0ff63;
+  border-radius: 10% 400% 10%;
+  transform: rotate(-80deg);
+}
+
+.bobo {
+  width: 32%;
+  padding-bottom: 32%;
+  background-image: linear-gradient(rgb(188, 233, 255), rgb(255, 253, 153));
+
 }
 
 small {
@@ -13,23 +63,46 @@ small {
   font-style: normal;
 }
 
-.chong a { position:relative; }
-.chong a span { position:absolute; display:none; z-index:99; }
-.chong a:hover span { display:block; margin-left: 10em}
+.chong a {
+  position: relative;
+}
 
+.chong a span {
+  position: absolute;
+  display: none;
+  z-index: 99;
+}
 
+.chong a:hover span {
+  display: block;
+}
 
+.jobs a {
+  position: relative;
+}
 
+.jobs a span {
+  position: absolute;
+  display: none;
+  z-index: 99;
+}
 
-details {
-  max-width: 3em;
-  margin: 0 auto;
-  padding-left: 0px;
-border-top-style: solid;
-margin-top: 2em;
-padding-top: 3em;
-border-top-color: black;
+.jobs a:hover span {
+  display: block;
+}
 
+.bobo a {
+  position: relative;
+}
+
+.bobo a span {
+  position: absolute;
+  display: none;
+  z-index: 99;
+}
+
+.bobo a:hover span {
+  display: block;
 }
 
 a:link {
@@ -40,6 +113,29 @@ a:link {
 
 a:hover {
   text-decoration-style: underline;
-  color:inherit;
+  color: inherit;
   background-color: hotpink;
 }
+
+
+/*
+@keyframes c2 {
+  0% {
+    transform: rotate(0deg) translate(.5em, -.5em) rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg) translate(.5em, -1.5em) rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(0deg) translate(.5em, -.5em) rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(20deg) translate(.5em, -.5em) rotate(-20deg);
+  }
+
+  100% {
+    transform: rotate(0deg) translate(.5em, -.5em) rotate(0deg);
+  }*/
