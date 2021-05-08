@@ -6,16 +6,28 @@
 body {
   font-family: courier new;
   display: grid;
-  grid-template-columns:1fr 1fr 1fr;
-justify-content:center;
+  grid-template-columns:auto 1fr auto / auto 1fr auto;
+grid-gap:1em;
+
+height: 100vh;
 }
 
+.name{
+  display:flex;
+  justify-content:space-between;
+  padding-bottom: 1em;
+}
+marquee{
+  color: #0064ff;
+background-color: #9ef6ff47;
+  /*border-radius: 50%;
+  background-image: linear-gradient(to right,rgb(255, 255, 255), rgb(153, 226, 255));
+  opacity: 80%;*/
+  height: 2em;
+}
 /*口袋*/
 header {
-  margin: 1em;
-  padding: 0;
-margin-top: 15em;
-
+ grid-column: 1 / 4;
 }
 
 p {
@@ -27,7 +39,7 @@ p {
 height:30em;
   background-color: #40f9bc;
   border-radius: 60% 80% 50% 60%;
-
+ grid-column: 1 / 2;
 /*
   animation-name: c2;
   animation-duration: 15s;
@@ -40,12 +52,12 @@ height:30em;
 height:30em;
   background-color: #c0ff63;
   border-radius: 10% 400% 10%;
-
+ grid-column: 2 / 3;
 }
 
 .bobo {
   height:30em;
-
+grid-column: 3 / 4;
   background-image: linear-gradient(rgb(188, 233, 255), rgb(255, 253, 153));
 }
 
@@ -134,6 +146,6 @@ a:hover {
   }*/
   @media (max-width: 800px) {
     body {
-      grid-template-columns: 1fr;
+    display:block;
     }
   }
