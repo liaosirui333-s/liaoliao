@@ -8,11 +8,20 @@ body {
   font-weight: 700;
   line-height: 1.5;
   font-style: normal;
+
 }
 
-.list {
-  margin-left: 2em;
+li{
+  margin:2em;
 }
+
+figure{
+  max-width: 41.5em;
+margin: 0 auto;
+
+}
+
+
 
 a:link {
   text-decoration: none;
