@@ -8,7 +8,8 @@ body {
   display: grid;
   grid-template-columns:auto 1fr auto / auto 1fr auto;
 grid-gap:1em;
-
+margin:0;
+padding:0;
 height: 100vh;
 }
 
@@ -28,24 +29,39 @@ background-color: #9ef6ff47;
 /*口袋*/
 header {
  grid-column: 1 / 4;
+ margin:1em;
 }
 
 p {
   font-size: 0.7em;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 /*黑幕*/
 .chong {
 height:30em;
-  background-color: #40f9bc;
+background-color: #40f9bc;
+
   border-radius: 60% 80% 50% 60%;
  grid-column: 1 / 2;
-/*
-  animation-name: c2;
-  animation-duration: 15s;
-  animation-timing-function: cubic-bezier(.68, -0.55, .47, 1.5);
+
+
+  animation-name: border2;
+  animation-duration: 8s;
+  /*animation-timing-function: cubic-bezier(.68, -0.55, .47, 1.5);*/
   animation-iteration-count: infinite;
-}*/
+
+animation-direction: alternate;
 }
 
 .jobs {
@@ -53,6 +69,8 @@ height:30em;
   background-color: #c0ff63;
   border-radius: 10% 400% 10%;
  grid-column: 2 / 3;
+
+
 }
 
 .bobo {
@@ -80,7 +98,12 @@ small {
 
 .chong a:hover span {
   display: block;
+
 }
+
+
+
+
 
 .jobs a {
   position: relative;
@@ -149,3 +172,24 @@ a:hover {
     display:block;
     }
   }
+
+
+
+
+
+
+   @keyframes border2 {
+
+0%{
+border-radius: 0% 0% 0% 0%;}
+
+
+50% {
+border-radius: 30% 40% 80% 30%;
+
+}
+
+
+    100% {
+border-radius: 60% 80% 50% 60%;
+}
