@@ -15,7 +15,8 @@ margin:2em;
 }
 
 img{
-  min-width: 100%
+  width:100%;
+ 	height:auto;
 }
 figure{
   margin-top:3em;}
