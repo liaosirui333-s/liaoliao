@@ -6,7 +6,8 @@
 body {
   font-family: courier new;
   display: grid;
-  grid-template-columns:auto 1fr auto / auto 1fr auto;
+grid-template-rows: 1fr 1fr 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr 1fr;
 grid-gap:1em;
 margin:0;
 padding:0;
@@ -28,8 +29,11 @@ background-color: #9ef6ff47;
 }
 /*口袋*/
 header {
- grid-column: 1 / 4;
  margin:1em;
+ grid-column-start: 1;
+grid-column-end: 5;
+grid-row-start: 1;
+grid-row-end: 2;
 }
 
 p {
@@ -37,47 +41,52 @@ p {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-/*黑幕*/
 .chong {
+grid-column: 2/1;
+  height:5em;
+  /*
 height:30em;
 background-color: #40f9bc;
-
-  border-radius: 60% 80% 50% 60%;
- grid-column: 1 / 2;
-
+border-radius: 60% 80% 50% 60%;
 
   animation-name: border2;
   animation-duration: 8s;
-  /*animation-timing-function: cubic-bezier(.68, -0.55, .47, 1.5);*/
+animation-timing-function: cubic-bezier(.68, -0.55, .47, 1.5);
   animation-iteration-count: infinite;
-
-animation-direction: alternate;
+animation-direction: alternate;*/
 }
 
+
+
 .jobs {
-height:30em;
+
+height:5em;
+/*
   background-color: #c0ff63;
   border-radius: 10% 400% 10%;
  grid-column: 2 / 3;
-
+*/
 
 }
 
 .bobo {
-  height:30em;
+  height:5em;
+  /*
 grid-column: 3 / 4;
   background-image: linear-gradient(rgb(188, 233, 255), rgb(255, 253, 153));
+  */
 }
+footer{
+grid-column-start: 1;
+grid-column-end: 5;
+grid-row-start: 4;
+grid-row-end: 5;
+}
+
+
+
+
+
 
 small {
   font-size: 0.8em;
