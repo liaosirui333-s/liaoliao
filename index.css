@@ -20,9 +20,9 @@ height: 100vh;
   padding-bottom: 1em;
 }
 marquee{
-  color: #0064ff;
-background-color: #9ef6ff47;
-  /*border-radius: 50%;
+  color: black;
+  /*background-color: #9ef6ff47;
+border-radius: 50%;
   background-image: linear-gradient(to right,rgb(255, 255, 255), rgb(153, 226, 255));
   opacity: 80%;*/
   height: 2em;
@@ -61,6 +61,7 @@ animation-direction: alternate;*/
 .jobs {
 
 height:5em;
+
 /*
   background-color: #c0ff63;
   border-radius: 10% 400% 10%;
@@ -76,7 +77,24 @@ grid-column: 3 / 4;
   background-image: linear-gradient(rgb(188, 233, 255), rgb(255, 253, 153));
   */
 }
+
+
+
+
+div{
+  display: flex;
+  justify-content: space-around;
+ align-items: center;
+
+
+
+}
+
+
+
+
 footer{
+
 grid-column-start: 1;
 grid-column-end: 5;
 grid-row-start: 4;
@@ -180,7 +198,14 @@ a:hover {
     body {
     display:block;
     }
+
+    div{
+      display: flex;
+      justify-content: flex-start;
+
+    }
   }
+
 
 
 
