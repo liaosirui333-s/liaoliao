@@ -146,6 +146,7 @@ small {
   display: block;
 }
 
+
 .bobo a {
   position: relative;
 }
@@ -157,6 +158,22 @@ small {
 }
 
 .bobo a:hover span {
+  display: block;
+}
+
+
+
+.barrier a {
+  position: relative;
+}
+
+.barrier a span {
+  position: absolute;
+  display: none;
+  z-index: 99;
+}
+
+.barrier a:hover span {
   display: block;
 }
 
