@@ -1,0 +1,32 @@
+:root {
+  font-size: 13px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  font-family:
+  "Courier New";
+
+
+}
+
+.content {
+  list-style-type: none;
+}
+
+
+div {display: flex;
+flex-direction: column;
+}
+
+figure{
+display: flex;
+align-items: center;
+border-top-style: solid;
+border-width: 1px;
+border-color: #bbb;
+margin-left: 0;
+margin-right: 0;
+border-bottom-style: solid;
+}
