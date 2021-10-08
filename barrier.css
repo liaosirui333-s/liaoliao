@@ -1,5 +1,6 @@
 :root {
   font-size: 13px;
+  color:#484848;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -16,17 +17,49 @@ body {
 }
 
 
-div {display: flex;
+.main {display: flex;
 flex-direction: column;
 }
 
 figure{
 display: flex;
 align-items: center;
+justify-content: space-between;
 border-top-style: solid;
 border-width: 1px;
 border-color: #bbb;
-margin-left: 0;
-margin-right: 0;
-border-bottom-style: solid;
+margin:0;
+}
+
+header{
+  margin-bottom: 0.5em;
+}
+
+.bottom{
+border: 1px dotted #b5b5b5;
+border-radius: 30px;
+padding: 10px 10px 10px 10px;
+text-decoration: none;
+background-color: white;
+}
+
+
+.icons{
+  margin-right: 1em;
+}
+
+
+
+
+
+a{
+  text-decoration-line: none;
+  color: #888;
+}
+
+footer{
+  position: fixed;
+  bottom: 2em;
+
+
 }
