@@ -8,7 +8,30 @@
 body {
   font-family:
   "Courier New";
+   margin-right: 2em;
+
 }
+.smaller{
+  font-size: 11px;
+}
+
+.chinese{
+  font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+}
+.highlight{
+  border-bottom: 1.5px dotted;
+  font-style: italic;
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+}
+
+
 
 .more{
   border: 1px dotted #b5b5b5;
@@ -45,8 +68,9 @@ align-items: center;
 justify-content: space-between;
 border-top-style: solid;
 border-width: 1px;
-border-color: #bbb;
+border-color: #b4b4b4;
 margin:0;
+padding:0;
 }
 
 header{
