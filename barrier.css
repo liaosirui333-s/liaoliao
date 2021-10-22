@@ -8,7 +8,7 @@
 body {
   font-family:
   "Courier New";
-   margin-right: 2em;
+   margin-right: 1em;
 
 }
 .smaller{
@@ -67,6 +67,8 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 border-top-style: solid;
+border-left-style: solid;
+border-right-style: solid;
 border-width: 1px;
 border-color: #b4b4b4;
 margin:0;
@@ -109,12 +111,43 @@ footer{
 
 
 
-a:link {
+#dram:link {
 
   background-color: #98ff69;
 }
 
-a:hover {
+#dram:hover {
 
   background-color: hotpink;
+}
+
+a :link{
+    background-color: white;
+}
+
+.candlelink:hover {
+
+  background-color: #56d262;
+}
+
+.grasslink:hover {
+
+  background-color: #61b5f9;
+}
+
+
+.discolink:hover {
+
+  background-color: #68ffff;
+}
+
+
+.lamplink:hover {
+
+  background-color: #fda0fd;
+}
+
+.soaplink:hover {
+
+  background-color: #ffda0b;
 }
