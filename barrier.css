@@ -151,3 +151,18 @@ a :link{
 
   background-color: #ffda0b;
 }
+
+.beachlink:hover {
+
+  background-color: #99B6FF;
+}
+
+.coatlink:hover {
+
+  background-color: #C6B198;
+}
+
+.coffeelink:hover {
+
+  background-color: #D4FF54;
+}
