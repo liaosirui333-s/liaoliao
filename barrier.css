@@ -60,6 +60,7 @@ summary::marker {
 
 .main {display: flex;
 flex-direction: column;
+margin-bottom: 8em;
 }
 
 figure{
@@ -104,6 +105,7 @@ a{
 footer{
   position: fixed;
   bottom: 2em;
+
 
 
 }
@@ -165,4 +167,13 @@ a :link{
 .coffeelink:hover {
 
   background-color: #D4FF54;
+}
+.sadlink:hover {
+
+  background-color: #F3FFFF;
+}
+
+.madlink:hover {
+
+  background-color: #E8DBFF;
 }
