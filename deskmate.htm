@@ -3,16 +3,87 @@
 
 <head>
   <title>•••••••••••ö</title>
+  <meta charset="utf-8">
   <link rel="icon" type="image/png" href="./photos/favicon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!--<link rel="stylesheet" type="text/css" href="chong.css">-->
   <link rel="stylesheet" type="text/css" href="chong2.css">
 </head>
 
 <body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/104/three.js"></script>
+<script type="module" src="main.js"></script>
+
+<!-- <script type="module">
+import * as THREE from 'three';
+
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+    import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
+// Instantiate a loader
+const loader = new GLTFLoader();
+// Load a glTF resource
+loader.load(
+	// resource URL
+	'liaosirui333-s.github.io/DESKMATEE/animal heal.gltf',
+	// called when the resource is loaded
+	function ( gltf ) {
+
+		scene.add( gltf.scene );
+
+		gltf.animations; // Array<THREE.AnimationClip>
+		gltf.scene; // THREE.Group
+		gltf.scenes; // Array<THREE.Group>
+		gltf.cameras; // Array<THREE.Camera>
+		gltf.asset; // Object
+
+	},
+	// called while loading is progressing
+	function ( xhr ) {
+
+		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+	},
+	// called when loading has errors
+	function ( error ) {
+
+		console.log( 'An error happened' );
+
+	}
+);
 
 
+renderer.outputEncoding = THREE.sRGBEncoding
+
+
+
+// const renderer = new THREE.WebGLRenderer();
+// renderer.setSize( window.innerWidth, window.innerHeight );
+// document.body.appendChild( renderer.domElement );
+//
+// const scene = new THREE.Scene();
+//
+// const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
+//
+// const controls = new OrbitControls( camera, renderer.domElement );
+//
+// //controls.update() must be called after any manual changes to the camera's transform
+// camera.position.set( 0, 20, 100 );
+// controls.update();
+//
+// function animate() {
+//
+// 	requestAnimationFrame( animate );
+//
+// 	// required if controls.enableDamping or controls.autoRotate are set to true
+// 	controls.update();
+//
+// 	renderer.render( scene, camera );
+//
+// }
+
+		</script> -->
 
 
 
