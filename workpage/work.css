@@ -1,0 +1,44 @@
+:root {
+    font-size: 15px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: courier new;
+}
+
+header {
+    margin: 1em;
+}
+
+.eachblock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p {
+    font-size: 0.7em;
+}
+
+.content {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+a:link {
+    text-decoration: none;
+    color: inherit;
+    background-color: #98ff69;
+}
+
+a:hover {
+    text-decoration-style: underline;
+    color: inherit;
+    background-color: hotpink;
+}
