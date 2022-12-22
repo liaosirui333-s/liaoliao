@@ -19,7 +19,7 @@ header {
     background-color: #cafc7e;
     border-radius: 90% 60% 70% 70%;
     margin-left: 2em;
-    box-shadow: rgba(23, 252, 57, 0.144) 0px -2px 2px 0px inset, rgba(154, 111, 255, 0.15) 0px -6px 3px 0px inset, rgba(188, 255, 166, 0.1) 0px -4px 4px 0px inset, rgba(216, 255, 138, 0.038) 0px 2px 1px, rgba(0, 0, 0, 0.153) 2px 2px 2px, rgba(0, 0, 0, 0.09) 0px 4px 4px, rgba(0, 0, 0, 0) 0px 6px 8px, rgba(0, 0, 0, 0.009) 0px 3px 6px;
+    box-shadow: rgba(0, 0, 0, 0.144) 0px -2px 2px 0px inset, rgba(154, 111, 255, 0.15) 0px -6px 3px 0px inset, rgba(188, 255, 166, 0.1) 0px -4px 4px 0px inset, rgba(216, 255, 138, 0.038) 0px 2px 1px, rgba(0, 0, 0, 0.153) 2px 2px 2px, rgba(0, 0, 0, 0.09) 0px 4px 4px, rgba(0, 0, 0, 0) 0px 6px 8px, rgba(0, 0, 0, 0.009) 0px 3px 6px;
 }
 
 img {
