@@ -1,160 +1,160 @@
-         :root {
-        font-size: 15px;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    
-    body {
-        font-family: courier new;
-    }
-    
-    header {
-        margin: 1em;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .back {
-        width: 3em;
-        text-align: center;
-        background-color: #cafc7e;
-        border-radius: 90% 60% 70% 70%;
-        margin-left: 2em;
-        box-shadow: rgba(0, 0, 0, 0.144) 0px -2px 2px 0px inset, rgba(154, 111, 255, 0.15) 0px -6px 3px 0px inset, rgba(188, 255, 166, 0.1) 0px -4px 4px 0px inset, rgba(216, 255, 138, 0.038) 0px 2px 1px, rgba(0, 0, 0, 0.153) 2px 2px 2px, rgba(0, 0, 0, 0.09) 0px 4px 4px, rgba(0, 0, 0, 0) 0px 6px 8px, rgba(0, 0, 0, 0.009) 0px 3px 6px;
-    }
-    
-    img {
-        transition: 1s;
-        max-width: 40%;
-        height: auto;
-        filter: blur(10px);
-        border-radius: 65%;
-    }
-    
-    img:hover {
-        border-radius: 2%;
-        transition: 0.6s;
-        max-width: 70%;
-        height: auto;
-        filter: blur(0px);
-        cursor: zoom-in;
-    }
-    
-    video {
-        transition: 1s;
-        max-width: 10%;
-        height: auto;
-        filter: blur(10px);
-        border-radius: 75% 70% 70% 50%;
-    }
-    
-    video:hover {
-        border-radius: 0;
-        transition: 0.6s;
-        max-width: 50%;
-        height: auto;
-        filter: blur(0px);
-        cursor: zoom-in;
-    }
-    
-    #img {
-        transition-timing-function: ease-in-out;
-    }
-    
-    .eachblock {
-        margin: 1em;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 2em;
-    }
-    
-    p {
-        font-size: 0.7em;
-    }
-    
-    .left {
-        display: flex;
-        gap: 2em;
-        width: fit-content
-    }
-    
-    .right {
-        width: 4em;
-        text-align: left;
-    }
-    
-    .content {
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr;
-        grid-gap: 4em;
-        margin-top: 4em;
-        margin-bottom: 4em;
-        padding: 2em;
-    }
-    /* lightbox */
-    
-    #lightbox {
-        position: fixed;
-        z-index: 1000;
-        top: 0;
-        width: 80%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.8);
-        display: none;
-    }
-    
-    #lightbox.active {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    #lightbox img {
-        /* 装饰popup img 顺滑的打开，*/
-        border-radius: 0.5%;
-        width: 60%;
-        height: auto;
-        filter: drop-shadow(2px 4px 7px rgba(0, 0, 0, 0.23));
-    }
-    
-    #lightbox video {
-        /* 装饰popup img 顺滑的打开，*/
-        border-radius: 0.5%;
-        width: 70%;
-        height: auto;
-        filter: drop-shadow(2px 4px 7px rgba(0, 0, 0, 0.23));
-    }
-    /* Hide Play button + controls on iOS */
-    
-    video::-webkit-media-controls {
-        display: none !important;
-    }
-    
-    a:link {
-        text-decoration: none;
-        color: inherit;
-        background-color: #98ff69;
-    }
-    
-    a:hover {
-        text-decoration-style: underline;
-        color: inherit;
-        background-color: hotpink;
-        cursor: alias;
-    }
-    
-    @media only screen and (max-width: 600px) {
-        .content {
-            display: grid;
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-            grid-template-columns: 1fr;
-            grid-gap: 4em;
-            margin-top: 4em;
-            margin-bottom: 4em;
-            padding: 0em;
-        }
-        /* .eachblock {
+              :root {
+             font-size: 15px;
+             -moz-osx-font-smoothing: grayscale;
+         }
+         
+         body {
+             font-family: courier new;
+         }
+         
+         header {
+             margin: 1em;
+             display: flex;
+             justify-content: space-between;
+         }
+         
+         .back {
+             width: 3em;
+             text-align: center;
+             background-color: #cafc7e;
+             border-radius: 90% 60% 70% 70%;
+             margin-left: 2em;
+             box-shadow: rgba(0, 0, 0, 0.144) 0px -2px 2px 0px inset, rgba(154, 111, 255, 0.15) 0px -6px 3px 0px inset, rgba(188, 255, 166, 0.1) 0px -4px 4px 0px inset, rgba(216, 255, 138, 0.038) 0px 2px 1px, rgba(0, 0, 0, 0.153) 2px 2px 2px, rgba(0, 0, 0, 0.09) 0px 4px 4px, rgba(0, 0, 0, 0) 0px 6px 8px, rgba(0, 0, 0, 0.009) 0px 3px 6px;
+         }
+         
+         img {
+             transition: 1s;
+             max-width: 40%;
+             height: auto;
+             filter: blur(10px);
+             border-radius: 65%;
+         }
+         
+         img:hover {
+             border-radius: 2%;
+             transition: 0.6s;
+             max-width: 70%;
+             height: auto;
+             filter: blur(0px);
+             cursor: zoom-in;
+         }
+         
+         video {
+             transition: 1s;
+             max-width: 10%;
+             height: auto;
+             filter: blur(10px);
+             border-radius: 75% 70% 70% 50%;
+         }
+         
+         video:hover {
+             border-radius: 0;
+             transition: 0.6s;
+             max-width: 50%;
+             height: auto;
+             filter: blur(0px);
+             cursor: zoom-in;
+         }
+         
+         #img {
+             transition-timing-function: ease-in-out;
+         }
+         
+         .eachblock {
+             margin: 1em;
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             gap: 2em;
+         }
+         
+         p {
+             font-size: 0.7em;
+         }
+         
+         .left {
+             display: flex;
+             gap: 2em;
+             width: fit-content
+         }
+         
+         .right {
+             width: 4em;
+             text-align: left;
+         }
+         
+         .content {
+             display: grid;
+             grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+             grid-template-columns: 1fr;
+             grid-gap: 4em;
+             margin-top: 4em;
+             margin-bottom: 4em;
+             padding: 4em;
+         }
+         /* lightbox */
+         
+         #lightbox {
+             position: fixed;
+             z-index: 1000;
+             top: 0;
+             width: 100%;
+             height: 100%;
+             background-color: rgba(255, 255, 255, 0.8);
+             display: none;
+         }
+         
+         #lightbox.active {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+         }
+         
+         #lightbox img {
+             /* 装饰popup img 顺滑的打开，*/
+             border-radius: 0.5%;
+             width: 60%;
+             height: auto;
+             filter: drop-shadow(2px 4px 7px rgba(0, 0, 0, 0.23));
+         }
+         
+         #lightbox video {
+             /* 装饰popup img 顺滑的打开，*/
+             border-radius: 0.5%;
+             width: 70%;
+             height: auto;
+             filter: drop-shadow(2px 4px 7px rgba(0, 0, 0, 0.23));
+         }
+         /* Hide Play button + controls on iOS */
+         
+         video::-webkit-media-controls {
+             display: none !important;
+         }
+         
+         a:link {
+             text-decoration: none;
+             color: inherit;
+             background-color: #98ff69;
+         }
+         
+         a:hover {
+             text-decoration-style: underline;
+             color: inherit;
+             background-color: hotpink;
+             cursor: alias;
+         }
+         
+         @media only screen and (max-width: 600px) {
+             .content {
+                 display: grid;
+                 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                 grid-template-columns: 1fr;
+                 grid-gap: 4em;
+                 margin-top: 4em;
+                 margin-bottom: 4em;
+                 padding: 0em;
+             }
+             /* .eachblock {
         margin: 1em;
         display: flex;
         flex-direction: column;
