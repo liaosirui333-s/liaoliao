@@ -1,190 +1,161 @@
 :root {
-  font-size: 13px;
-  color:#484848;
-  -moz-osx-font-smoothing: grayscale;
+    font-size: 13px;
+    color: #484848;
+    -moz-osx-font-smoothing: grayscale;
 }
-
 
 body {
-  font-family:
-  "Courier New";
-   margin-right: 1em;
-
-}
-.smaller{
-  font-size: 11px;
+    font-family: "Courier New";
+    margin-right: 1em;
 }
 
-.chinese{
-  font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
-}
-.highlight{
-  border-bottom: 1.5px dotted;
-  font-style: italic;
+.smaller {
+    font-size: 11px;
 }
 
-.menu{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-
+.chinese {
+    font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+    line-height: 1.5;
 }
 
-
-
-.more{
-  border: 1px dotted #b5b5b5;
-  border-radius: 30px;
-  padding: 10px 10px 10px 10px;
-  text-decoration: none;
-  background-color: white;
+.highlight {
+    border-bottom: 1.5px dotted;
+    font-style: italic;
 }
 
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-summary{
+.more {
+    border: 1px dotted #b5b5b5;
+    border-radius: 30px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    background-color: white;
+}
+
+summary {
     margin-bottom: 2em;
     margin-top: 2em;
     cursor: pointer;
 }
 
 summary::marker {
-  content: none;
+    content: none;
 }
-
 
 .content {
-  list-style-type: none;
+    list-style-type: none;
 }
 
-
-.main {display: flex;
-flex-direction: column;
-margin-bottom: 8em;
+.main {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8em;
 }
 
-figure{
-display: flex;
-align-items: center;
-justify-content: space-between;
-border-top-style: solid;
-border-left-style: solid;
-border-right-style: solid;
-border-width: 1px;
-border-color: #b4b4b4;
-margin:0;
-padding:0;
+figure {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: #b4b4b4;
+    margin: 0;
+    padding: 0;
 }
 
-header{
-  margin-bottom: 2em;
+header {
+    margin-bottom: 2em;
 }
 
-.bottom{
-border: 1px dotted #b5b5b5;
-border-radius: 30px;
-padding: 10px 10px 10px 10px;
-text-decoration: none;
-background-color: white;
+.bottom {
+    border: 1px dotted #b5b5b5;
+    border-radius: 30px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    background-color: white;
 }
 
-
-.icons{
-  margin-right: 3em;
+.icons {
+    margin-right: 3em;
 }
 
-.two_link{
-
-display:flex;
-align-items: center;
-justify-content: space-between;
-
+.two_link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-
-
-
-a{
-  text-decoration-line: none;
-  color: #484848;
+a {
+    text-decoration-line: none;
+    color: #484848;
 }
 
-footer{
-  position: fixed;
-  bottom: 2em;
-
-
-
+footer {
+    position: fixed;
+    bottom: 2em;
 }
-.pdf{
+
+.pdf {
     position: sticky;
-bottom: 0.1em;
-     float:right;
+    bottom: 0.1em;
+    float: right;
 }
-
-
 
 #dram:link {
-
-  background-color: #98ff69;
+    background-color: #98ff69;
 }
 
 #dram:hover {
-
-  background-color: hotpink;
+    background-color: hotpink;
 }
 
-a :link{
+a :link {
     background-color: white;
 }
 
 .candlelink:hover {
-
-  background-color: #56d262;
+    background-color: #56d262;
 }
 
 .grasslink:hover {
-
-  background-color: #61b5f9;
+    background-color: #61b5f9;
 }
-
 
 .discolink:hover {
-
-  background-color: #68ffff;
+    background-color: #68ffff;
 }
 
-
 .lamplink:hover {
-
-  background-color: #fda0fd;
+    background-color: #fda0fd;
 }
 
 .soaplink:hover {
-
-  background-color: #ffda0b;
+    background-color: #ffda0b;
 }
 
 .beachlink:hover {
-
-  background-color: #99B6FF;
+    background-color: #99B6FF;
 }
 
 .coatlink:hover {
-
-  background-color: #C6B198;
+    background-color: #C6B198;
 }
 
 .coffeelink:hover {
-
-  background-color: #D4FF54;
+    background-color: #D4FF54;
 }
-.sadlink:hover {
 
-  background-color: #F3FFFF;
+.sadlink:hover {
+    background-color: #F3FFFF;
 }
 
 .madlink:hover {
-
-  background-color: #E8DBFF;
+    background-color: #E8DBFF;
 }
