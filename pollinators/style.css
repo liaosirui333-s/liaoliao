@@ -96,14 +96,22 @@ body {
 }
 
 .date {
-    color: #909090;
-    font-size: 10px;
+    color: #5e5e5e;
+    font-size: 15px;
     font-family: 'Snell Roundhand';
     text-align: center;
     line-height: 101%;
     position: fixed;
     top: 50%;
     left: 46%;
+    opacity: 0.7;
+    filter: blur(3px);
+    transition: 1000ms;
+}
+
+.date:hover {
+    opacity: 1;
+    filter: blur(0px);
 }
 
 .flower2 {
@@ -187,4 +195,18 @@ body {
     90% {
         transform: scale(0)
     }
+}
+
+#gifc {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: 400ms;
+}
+
+#bfly {
+    position: absolute;
+    width: 15px;
+    height: 15px;
 }

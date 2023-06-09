@@ -31,7 +31,9 @@ $(document).ready(function() {
     refreshGrass();
 });
 
-
+function map(value, low1, high1, low2, high2) {
+    return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+}
 //polinate
 
 $(document).ready(function() {
@@ -44,20 +46,22 @@ $(document).ready(function() {
 
     $(window).mousemove(function(e) {
         mousePos.x = e.pageX;
-        mousePos.y = e.pageY + 100;
+        mousePos.y = e.pageY;
     });
 
     $(window).mouseleave(function(e) {
-        mousePos.x = -10;
+        mousePos.x = -100;
         mousePos.y = -1;
     });
 
     var draw = setInterval(function() {
-        if (mousePos.x >= 500 && mousePos.y <= 500) {
+        if (mousePos.y >= window.innerHeight / 2) {
 
-            var range = getRandomInt(0, 300);
+            var balln = map(mousePos.y, 0, window.innerHeight, 0, 100);
 
-            var color = "background: rgb(140,140,140);";
+            var range = balln;
+            // console.log(balln);
+            var color = "background: rgb(10,10,10);";
 
             var sizeInt = getRandomInt(0, 1);
             size = "height: " + sizeInt + "px; width: " + sizeInt + "px;";
@@ -69,13 +73,13 @@ $(document).ready(function() {
 
             var style = left + top + color + size;
             $("<div class='ball' style='" + style + "'></div>").appendTo('#wrap').one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function() { $(this).remove(); });
-        }
+        } else if (mousePos.y <= window.innerHeight / 2) {
 
-        if (mousePos.x <= 500 && mousePos.y >= 500) {
+            var balln = map(mousePos.y, 0, window.innerHeight, 0, 300);
 
-            var range = getRandomInt(0, 100);
+            var range = balln;
 
-            var color = "background: rgb(235,235,235);";
+            var color = "background: rgb(255,255,255);";
 
             var sizeInt = getRandomInt(0, 1);
             size = "height: " + sizeInt + "px; width: " + sizeInt + "px;";
@@ -92,13 +96,13 @@ $(document).ready(function() {
 });
 
 document.addEventListener("mousemove", function(e) {
-    if (e.clientX >= 500 && e.clientY <= 500) {
+    if (e.clientY >= window.innerHeight / 2) {
         bgchange.style.background = "rgb(250, 250, 250)"
         blurr.style.filter = "blur(0px)"
 
-    } else if (e.clientX <= 500 && e.clientY >= 500) {
+    } else if (e.clientY <= window.innerHeight / 2) {
         bgchange.style.background = "rgb(0, 0, 0)"
-        blurr.style.filter = "blur(8px)"
+        blurr.style.filter = "blur(4px)"
 
     }
 
@@ -211,7 +215,8 @@ function updateElementOpacity(elements, cursorX) {
 //         flow.style.opacity = 0;
 //     }
 // });
-
+const bflyC = document.getElementById('gifc');
+const bgif = document.getElementById('bfly');
 
 // function updateSoundVolume(cursorX) {
 //     const volume = cursorX / window.innerWidth; // Adjust the value to control the volume range
@@ -237,10 +242,23 @@ document.addEventListener("mousemove", function(e) {
     updateElementPosition(flowws);
     updateElementPosition(flowwss);
     const cursorX = e.clientX;
+    const cursorY = e.clientY;
+
     updateElementOpacity(flowws, cursorX);
     updateElementOpacity(flowwss, cursorX);
     updateAudioVolume(cursorX);
+    bflyC.style.left = `${cursorX+20}px`;
+    bflyC.style.top = `${cursorY+10}px`;
 
 
 
 });
+
+
+// document.addEventListener('mousemove', (event) => {
+//     const mouseX = e.clientX;
+//     const mouseY = e.clientY;
+
+//     gifContainer.style.left = `${mouseX}px`;
+//     gifContainer.style.top = `${mouseY}px`;
+// });
