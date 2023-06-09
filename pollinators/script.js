@@ -21,7 +21,7 @@ function refreshGrass() {
         }));
     }
     grassR = document.querySelectorAll(".grastyle");
-}
+};
 
 $(window).on('resize', function() {
     refreshGrass();
@@ -43,28 +43,29 @@ $(document).ready(function() {
     }
 
     $(window).mousemove(function(e) {
-        mousePos.x = e.pageX + 10;
-        mousePos.y = e.pageY + 10;
+        mousePos.x = e.pageX;
+        mousePos.y = e.pageY + 100;
     });
 
     $(window).mouseleave(function(e) {
-        mousePos.x = -100;
+        mousePos.x = -10;
         mousePos.y = -1;
     });
 
     var draw = setInterval(function() {
         if (mousePos.x >= 500 && mousePos.y <= 500) {
 
-            var range = getRandomInt(5, 300);
+            var range = getRandomInt(0, 300);
 
-            var color = "background: rgb(20,20,20);";
+            var color = "background: rgb(140,140,140);";
 
-            var sizeInt = getRandomInt(1, 2);
+            var sizeInt = getRandomInt(0, 1);
             size = "height: " + sizeInt + "px; width: " + sizeInt + "px;";
 
             var left = "left: " + getRandomInt(mousePos.x - range - sizeInt, mousePos.x + range) + "px;";
 
             var top = "top: " + getRandomInt(mousePos.y - range - sizeInt, mousePos.y + range) + "px;";
+
 
             var style = left + top + color + size;
             $("<div class='ball' style='" + style + "'></div>").appendTo('#wrap').one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function() { $(this).remove(); });
@@ -72,11 +73,11 @@ $(document).ready(function() {
 
         if (mousePos.x <= 500 && mousePos.y >= 500) {
 
-            var range = getRandomInt(1, 50);
+            var range = getRandomInt(0, 100);
 
             var color = "background: rgb(235,235,235);";
 
-            var sizeInt = getRandomInt(1, 2);
+            var sizeInt = getRandomInt(0, 1);
             size = "height: " + sizeInt + "px; width: " + sizeInt + "px;";
 
             var left = "left: " + getRandomInt(mousePos.x - range - sizeInt, mousePos.x + range) + "px;";
@@ -118,11 +119,10 @@ document.addEventListener("mousemove", function(e) {
         // let centerX = rect.left + rect.width;
         // let centerY = rect.top + rect.height;
         let angle = Math.atan((window.innerHeight - e.clientY) / (e.clientX - leftp));
-        gra.style.transform = "rotate(" + (angle * (Math.random() * (50 - 10) - 10)) + "deg)";
+
+        gra.style.transform = "rotate(" + (angle + (Math.random() * 60)) + "deg)";
 
     }
-
-
 
 });
 
@@ -131,21 +131,116 @@ document.addEventListener("mousemove", function(e) {
 let flower1 = document.querySelector(".flower1");
 let flowws = document.querySelectorAll(".floww");
 
-document.addEventListener("mousedown", function(e) {
-    // Get the x position of the mouse click
-    let x = e.clientX;
+let flowwss = document.querySelectorAll(".flow");
 
-    // Set the left position of all .floww elements to the x position
-    for (let flow of flowws) {
-        flow.style.left = Math.random() * 10 + "vw";
-        flow.style.top = Math.random() * 10 + "vh";
-        flow.style.opacity = 1;
+
+function updateElementPosition(elements) {
+    for (let element of elements) {
+        element.style.left = Math.random() * 100 + "vw";
+        element.style.top = Math.random() * 14 + "vh";
+        element.style.opacity = 1;
+
     }
-});
 
-// document.addEventListener("mouseup", function() {
-//     // Hide all .floww elements by setting their opacity to 0
+}
+
+function updateElementOpacity(elements, cursorX) {
+    for (let element of elements) {
+        const elementX = element.getBoundingClientRect().left;
+        const distance = Math.abs(cursorX - elementX);
+        const opacity = 1 - distance / 300;
+        element.style.opacity = opacity;
+    }
+}
+
+// Function to animate the elements upward and fade out
+// function animateElements(elements) {
+//     for (let element of elements) {
+//         const initialTop = parseFloat(element.style.top);
+//         const initialLeft = parseFloat(element.style.left);
+//         const speed = Math.random() * 2 + 0.4;
+//         let distance = 0;
+//         const animation = setInterval(() => {
+//             distance += speed;
+//             element.style.top = initialTop - distance + speed + "vh";
+//             element.style.left = initialLeft - distance + speed * 100 + "vw";
+//             element.style.opacity = 1 - distance * speed + 0.2;
+//             if (distance >= 100) {
+//                 clearInterval(animation);
+//                 element.style.opacity = 0;
+//             }
+//         }, 10);
+//     }
+// }
+
+
+
+// document.addEventListener("mouseup", function(e) {
+//     animateElements(flowws);
+//     animateElements(flowwss);
+// });
+
+// document.addEventListener("mousedown", function(e) {
+
+
+//     // Get the x position of the mouse click
+//     let x = e.clientX;
+
+//     // Set the left position of all .floww elements to the x position
 //     for (let flow of flowws) {
+//         flow.style.left = Math.random() * 100 + "vw";
+//         flow.style.top = Math.random() * 14 + "vh";
+//         flow.style.opacity = 1;
+//     }
+//     for (let floww of flowwss) {
+//         floww.style.left = Math.random() * 100 + "vw";
+//         floww.style.top = Math.random() * 14 + "vh";
+//         floww.style.opacity = 1;
+//     }
+
+// });
+
+// document.addEventListener("mouseup", function(e) {
+//     // Get the x position of the mouse click
+//     let x = e.clientX;
+
+//     // Set the left position of all .floww elements to the x position
+//     for (let flow of flowws) {
+//         flow.style.left = Math.random() * 100 + "vw";
+//         flow.style.top = Math.random() * 14 + "vh";
 //         flow.style.opacity = 0;
 //     }
 // });
+
+
+// function updateSoundVolume(cursorX) {
+//     const volume = cursorX / window.innerWidth; // Adjust the value to control the volume range
+//     sound.volume = volume;
+function updateAudioVolume(cursorX) {
+
+    const windowWidth = window.innerWidth;
+    const maxVolume = 1; // Maximum volume
+    const minVolume = 0.2; // Minimum volume
+    const center = windowWidth / 2;
+    const distanceFromCenter = Math.abs(cursorX - center);
+    const volumeRange = Math.log10(maxVolume / minVolume); // Logarithmic volume range
+    const volumeOffset = Math.log10(distanceFromCenter + 1) / Math.log10(center + 1);
+    const volume = maxVolume - volumeOffset * volumeRange;
+
+    // Set the volume of the audio element
+    const audio = document.getElementById("audioo");
+    audio.volume = volume;
+    console.log(volume);
+}
+
+document.addEventListener("mousemove", function(e) {
+    updateElementPosition(flowws);
+    updateElementPosition(flowwss);
+    const cursorX = e.clientX;
+    updateElementOpacity(flowws, cursorX);
+    updateElementOpacity(flowwss, cursorX);
+    updateAudioVolume(cursorX);
+
+
+
+});

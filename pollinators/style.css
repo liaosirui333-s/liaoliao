@@ -25,7 +25,7 @@ body {
     transform: rotate(45deg);
     transition-delay: 100ms;
     transition: 1000ms;
-    border-radius: 20%;
+    border-radius: 90%;
 }
 
 .grass {
@@ -35,31 +35,27 @@ body {
 }
 
 .flower1 {
-    bottom: 0;
+    bottom: 36px;
     position: fixed;
     /* background: hotpink; */
-    left: 10px;
-    width: 100px;
-    height: 100px;
+    left: 34px;
+    width: 100vw;
+    height: 80px;
     /* background-color: aqua; */
 }
 
 .floww {
-    /* bottom: 0;
-    left: 10vw;
-    top: 10vh;
-    margin: 0;
-    background: hotpink;
-    border: solid, grey;
-    width: 10px;
-    height: 10px;
-    opacity: 0; */
+    transition-delay: 100ms;
+    transition: 1000ms;
     position: absolute;
-    width: 5px;
-    height: 5px;
-    background-color: hotpink;
+    width: 3px;
+    height: 3px;
+    background-color: #ff6cb5;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    background-blend-mode: difference;
+    filter: blur(1px);
+    box-shadow: rgb(253 252 232 / 65%) 0px 1px 3px 0px;
 }
 
 .back {
@@ -69,7 +65,7 @@ body {
     height: 100vh;
     transition: 1000ms;
     mix-blend-mode: overlay;
-    background: linear-gradient(180deg, #FFFFFF 87.77%, #9e9e9e 124.85%);
+    background: linear-gradient(180deg, #000 87.77%, #5add00a3 140.85%);
 }
 
 .title {
@@ -97,6 +93,41 @@ body {
     text-align: center;
     line-height: 94%;
     filter: blur(0px);
+}
+
+.date {
+    color: #909090;
+    font-size: 10px;
+    font-family: 'Snell Roundhand';
+    text-align: center;
+    line-height: 101%;
+    position: fixed;
+    top: 50%;
+    left: 46%;
+}
+
+.flower2 {
+    bottom: 4em;
+    position: fixed;
+    /* background: hotpink; */
+    left: 34px;
+    width: 100vw;
+    height: 80px;
+    /* background-color: aqua; */
+}
+
+.flow {
+    transition-delay: 100ms;
+    transition: 1000ms;
+    position: absolute;
+    font-size: 21px;
+    font-family: 'Snell Roundhand';
+    color: rgb(142, 202, 34);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-blend-mode: screen;
+    filter: blur(1px);
+    box-shadow: rgba(253, 252, 232, 0.27) 0px 1px 3px 0px;
 }
 
 .number {
@@ -143,17 +174,17 @@ body {
     height: 10px;
     border-radius: 50%;
     background: rgb(255, 12, 12);
-    animation: implode 2s ease-in-out;
+    animation: implode 1s ease-in-out;
     animation-fill-mode: both;
     opacity: 1;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    /* background-blend-mode: exclusion; */
-    transition-delay: 10ms;
-    transition: 10ms;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 2px 3px 0px;
+    mix-blend-mode: luminosity;
+    transition-delay: 60ms;
+    transition: 100ms;
 }
 
 @keyframes implode {
-    30% {
+    90% {
         transform: scale(0)
     }
 }
