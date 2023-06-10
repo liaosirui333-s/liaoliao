@@ -228,7 +228,7 @@ function updateAudioVolume(cursorX) {
     const minVolume = 0.2; // Minimum volume
     const center = windowWidth / 2;
     const distanceFromCenter = Math.abs(cursorX - center);
-    const volumeRange = Math.log10(maxVolume / minVolume); // Logarithmic volume range
+    const volumeRange = Math.log10(maxVolume / minVolume);
     const volumeOffset = Math.log10(distanceFromCenter + 1) / Math.log10(center + 1);
     const volume = maxVolume - volumeOffset * volumeRange;
 
